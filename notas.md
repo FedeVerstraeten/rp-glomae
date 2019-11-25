@@ -44,4 +44,4 @@ method=link-local
 
 - Para acceder mediante la terminal de debug, conectar el adaptador USB-to-TTL a los pines que están al lado del puerto hembra USB de la RedPitaya de la forma: RXD->Rx, TXD->Tx, GND->GND. Ejecutar luego en la PC Host la terminal mediante el comando `miniterm.py /dev/ttyUSB0 115200` adecuando la dirección del dispositivo y el Baud-Rate según sea necesario.
 
-- Para ejecutar un comando vía python desde la PC Host, previamente hay que ejecutar dentro de RedPitaya el comando `systemctl start scpi.service`. Verificar que el servicio esté corriendo correctamente.
+- Para ejecutar un comando vía python desde la PC Host, previamente hay que ejecutar dentro de RedPitaya el comando `systemctl start redpitaya_scpi.service` o bien ingresando desde el browser a `http://rp-f0477c.local/scpi_manager/` y activar *SCPI Server* donde nos indicará la IP y el puerto por donde podremos conectarnos con scripts externos (ejemplos: Python, Matlab, etc.). Verificar que el servicio esté corriendo correctamente con `systemctl status redpitaya_scpi.service`.
